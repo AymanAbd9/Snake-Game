@@ -23,7 +23,7 @@ class Snake():
             self.squares.append(new_square)
 
     def move(self):
-        # Move body of the snake
+        # Move body of the snake to the next square
         for last_square in range(len(self.squares) - 1, 0, -1):
             x = self.squares[last_square - 1].xcor()
             y = self.squares[last_square - 1].ycor()
