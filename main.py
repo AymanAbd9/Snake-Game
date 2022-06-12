@@ -39,11 +39,9 @@ while game_is_on:
         game_is_on = False
         scoreboard.game_over()
 
-    # Detect collsion head with body
-    for square in snake.squares:
-        if square == snake.head:
-            pass
-        elif snake.head.distance(square) < 10:
+    # Detect collsion head with body 
+    for square in snake.squares[1:]: # Exclude the head in the list (squares[0])
+        if snake.head.distance(square) < 10:
             game_is_on = False
             scoreboard.game_over()
 
